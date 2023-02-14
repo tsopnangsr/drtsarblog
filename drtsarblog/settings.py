@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+^^3yy%zsrg!wh&h0hcfdikgg%4y6e(_4e1f@vmd$4f)7!bg6r
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+SITE_ID = 1
 
 # Application definition
 
@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'taggit',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
 ]
 
 MIDDLEWARE = [
@@ -122,5 +125,19 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email server configuration
+'''
+EMAIL_HOST = "smtp.hostinger.com"
+EMAIL_HOST_USER = "smtp@drtsar.com"
+EMAIL_HOST_PASSWORD = "63ukSZJm3s"
+EMAIL_PORT = 465
+EMAIL_USE_TLS = True
+'''
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "tsopnangsr2@gmail.com"
+EMAIL_HOST_PASSWORD = "nvpazfotqugqaayd"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
 
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
